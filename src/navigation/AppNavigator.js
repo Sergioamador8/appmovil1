@@ -1,14 +1,12 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './src/screens/HomeScreen';
-import MovieDetailScreen from './src/screens/MovieDetailScreen';
-import AppNavigator from './src/navigation/AppNavigator'; // Ejemplo de navegación centralizada
-
+import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import HomeScreen from '../screens/HomeScreen';
+import MovieDetailScreen from '../screens/MovieDetailScreen';
 
 const Stack = createStackNavigator();
 
-function App() {
+const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
@@ -17,6 +15,6 @@ function App() {
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+};
 
-export default App;
+export default AppNavigator;
